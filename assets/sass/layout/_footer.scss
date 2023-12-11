@@ -1,0 +1,104 @@
+footer {
+  background-color: $bgcolor;
+  font-family: "Epilogue", sans-serif;
+  padding-top: 50px;
+  .container {
+    .foot-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      .foot-title {
+        h4 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          color: $choco;
+        }
+      }
+      nav {
+        h5 {
+          @include h5;
+        }
+        li {
+          font-size: 16px;
+          font-weight: 400;
+          color: $choco;
+          line-height: 32px;
+        }
+      }
+      .sosial {
+        @include center;
+        gap: 20px;
+        align-self: flex-start;
+        .fb {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: #ef6d58;
+          @include center;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.copy-container {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  color: $choco;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  .copy {
+    color: #391400a3;
+  }
+  .left {
+    display: flex;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 645px) {
+  footer {
+    padding-top: 50px;
+    .container {
+      .foot-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        .foot-title {
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+          }
+        }
+        nav {
+          h5 {
+            line-height: 25px;
+          }
+          li {
+            font-size: 16px;
+            font-weight: 400;
+            color: $choco;
+            line-height: 32px;
+          }
+        }
+        .sosial {
+          @include center;
+          flex-direction: column;
+          .fb {
+            width: 38px;
+            height: 38px;
+          }
+        }
+      }
+    }
+  }
+  .copy-container {
+    font-size: 14px;
+    line-height: 22px;
+
+    .left {
+      gap: 10px;
+    }
+  }
+}
